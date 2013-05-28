@@ -57,8 +57,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="span12">
+				<?php if($title != ""):?>
 				<h1><?php echo $title; ?></h1>
 				<hr>
+			<?php endif; ?>
 <?php if (Session::get_flash('success')): ?>
 				<div class="alert alert-success">
 					<button class="close" data-dismiss="alert">×</button>
@@ -72,18 +74,19 @@
 				</div>
 <?php endif; ?>
 			</div>
+			
 			<div class="span12">
 <?php echo $content; ?>
 			</div>
 		</div>
-		<hr/>
+<!-- 		<hr/>
 		<footer>
 			<p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
 			<p>
 				<a href="http://fuelphp.com">FuelPHP</a> is released under the MIT license.<br>
 				<small>Version: <?php echo e(Fuel::VERSION); ?></small>
 			</p>
-		</footer>
+		</footer> -->
 	</div>
 </body>
 </html>
